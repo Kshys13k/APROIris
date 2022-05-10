@@ -1,0 +1,5 @@
+1.zapisywanie komend do pliku bez nadpisywania+
+2.zapis danych do JSON albo XML
+3. opisać helpa+
+4. zdebugować+
+5. skomentować
