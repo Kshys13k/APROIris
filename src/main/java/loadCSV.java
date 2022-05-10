@@ -4,7 +4,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Loading data set from CSV file
+ */
 public class loadCSV {
+
+    /**
+     * converts string from CSV file to data set format used by this program
+     * @param string
+     * @return
+     */
     private List<Record> converter(String string){
         List<Record> list=new ArrayList();
         String[]rows=string.split("N");
@@ -22,7 +31,10 @@ public class loadCSV {
         return list;
     }
 
-
+    /**
+     * Loading data set from CSV file
+     * @return
+     */
     public List<Record> load(){
         StringBuilder resultString = new StringBuilder();
         try {

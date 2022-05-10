@@ -6,7 +6,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * printing all operations into operations.txt file
+ */
 public class OperationListToTXT {
+    /**
+     * printing all operations into operations.txt file
+     * @param text
+     */
     public void writeToTXT(String text){
         File file = new File("src/main/java/operations.txt");
         try {

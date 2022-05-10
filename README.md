@@ -19,7 +19,7 @@ Welcome to APROiris, program with helps in analysing irises data set.
    -'maxOf [number of column(1-4)] [spacies name]' - returns the greatest element in given column for given species
    -'minOf [number of column(1-4)] [spacies name]' - returns the smallest element in given column for given species
    Example: 'medianOf 2 Iris-virginica should return 3.25
-   -'count [spacies name]' - return number of record where spacies name occurs
+   -'count [species name]' - return number of record where species name occurs
    -'save' - saving data to JSON file
 3. Files
    -Iris.csv- It is the file that contains data set. It is possible to edit this file and add new records as long as the format of data doesn't change.

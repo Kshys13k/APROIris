@@ -24,3 +24,35 @@ Data set loaded successfully
 Printing data
 Average value of column 3 is: 3.7586665
 Average of column 3 for species: Iris-virginica is: 1.8506669
+Help
+Data set loaded successfully
+Printing data
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Saving data to JSON
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Saving data to JSON
+Data set loaded successfully
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON
+Data set loaded successfully
+Saving data to JSON

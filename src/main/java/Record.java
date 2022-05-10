@@ -1,3 +1,6 @@
+/**
+ * Objects of this class are records in data set
+ */
 public class Record {
     int ID;
     private float SepalLengthCm;

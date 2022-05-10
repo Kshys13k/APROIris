@@ -5,8 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Main class
+ */
 public class Main {
 
+    /**
+     * prints help
+     */
     private static void help(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("README.md"));
@@ -21,16 +27,24 @@ public class Main {
     }
 
 
+    /**
+     * main method
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
         OperationListToTXT txt=new OperationListToTXT();
+        DataSetOperations dataSetOperations= new DataSetOperations();
+        DataToJSON json=new DataToJSON();
+        List<Record> data=new ArrayList<>();
+
         String command;
         int parameter;
         String parameter2;
         float result;
-        DataSetOperations dataSetOperations= new DataSetOperations();
+
         System.out.println("Welcome to APROiris, program with helps in analysing irises data set. If you need help type 'help','h' or check out README.txt file:");
-        List<Record> data=new ArrayList<>();
+
         loop: for(;;){
             command=scanner.next();
             switch (command){
@@ -103,6 +117,11 @@ public class Main {
                 case "print":
                     dataSetOperations.print(data);
                     txt.writeToTXT("Printing data");
+                    break;
+                case "save":
+                    json.saveData(data);
+                    txt.writeToTXT("Saving data to JSON");
+                    System.out.println("Data set has been saved");
                     break;
                 case "exit": break loop;
             }

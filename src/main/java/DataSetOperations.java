@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class that provides methods to analyze data
+ */
 public class DataSetOperations {
     public void print(List<Record> data){
         System.out.println("Id,SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm,Species");
@@ -9,6 +12,12 @@ public class DataSetOperations {
         }
     }
 
+    /**
+     * counts arithmetic average of elements in given column
+     * @param data
+     * @param columnNumber
+     * @return
+     */
     public float arithmeticAverage(List<Record> data, int columnNumber){
         int i;
         float sum=0;
@@ -34,6 +43,13 @@ public class DataSetOperations {
         return sum/i;
     }
 
+    /**
+     *  counts arithmetic average of elements in given column for given species
+     * @param data
+     * @param columnNumber
+     * @param species
+     * @return
+     */
     public float arithmeticAverageForGivenSpecies(List<Record> data, int columnNumber, String species){
         int i;
         float sum=0;
@@ -59,6 +75,12 @@ public class DataSetOperations {
         return sum/i;
     }
 
+    /**
+     * counts median of elements in given column
+     * @param data
+     * @param columnNumber
+     * @return
+     */
     public float median(List<Record> data, int columnNumber){
         List<Float> list=getColumn(data,columnNumber);
         list=bubbleSort(list);
@@ -67,6 +89,14 @@ public class DataSetOperations {
             return ((list.get(list.size()/2)+(list.get((list.size()-2)/2)))/2);
         }
     }
+
+    /**
+     * counts median of elements in given column for given species
+     * @param data
+     * @param columnNumber
+     * @param species
+     * @return
+     */
     public float medianForGivenSpecies(List<Record> data, int columnNumber, String species){
         List<Float> list=getColumnForGivenSpecies(data,columnNumber, species);
         list=bubbleSort(list);
@@ -76,6 +106,12 @@ public class DataSetOperations {
         }
     }
 
+    /**
+     * returns the greatest element in given column
+     * @param data
+     * @param columnNumber
+     * @return
+     */
     public float maxFloat(List<Record> data, int columnNumber){
         List <Float> list=getColumn(data, columnNumber);
         list=bubbleSort(list);
@@ -86,6 +122,13 @@ public class DataSetOperations {
         return max;
     }
 
+    /**
+     * returns the greatest element in given column for given species
+     * @param data
+     * @param columnNumber
+     * @param species
+     * @return
+     */
     public float maxFloatForGivenSpecies(List<Record> data, int columnNumber, String species){
         List <Float> list=getColumnForGivenSpecies(data, columnNumber, species);
         list=bubbleSort(list);
@@ -96,6 +139,12 @@ public class DataSetOperations {
         return max;
     }
 
+    /**
+     * returns the smallest element in given column
+     * @param data
+     * @param columnNumber
+     * @return
+     */
     public float minFloat(List<Record> data, int columnNumber){
         List <Float> list=getColumn(data, columnNumber);
         list=bubbleSort(list);
@@ -106,6 +155,13 @@ public class DataSetOperations {
         return min;
     }
 
+    /**
+     * returns the smallest element in given column for given species
+     * @param data
+     * @param columnNumber
+     * @param species
+     * @return
+     */
     public float minFloatForGivenSpecies(List<Record> data, int columnNumber, String species){
         List <Float> list=getColumnForGivenSpecies(data, columnNumber, species);
         list=bubbleSort(list);
@@ -116,6 +172,12 @@ public class DataSetOperations {
         return min;
     }
 
+    /**
+     * return number of record where species name occurs
+     * @param data
+     * @param species
+     * @return
+     */
     public int appearancesCounter(List<Record> data, String species){
         int counter=0;
         for(int i=0;i<data.size();i++){
@@ -124,6 +186,11 @@ public class DataSetOperations {
         return counter;
     }
 
+    /**
+     * bubbleSort algorithm
+     * @param list
+     * @return
+     */
     private List<Float> bubbleSort(List<Float> list){
         float temp;
         boolean swapped;
@@ -140,6 +207,12 @@ public class DataSetOperations {
         return list;
     }
 
+    /**
+     * returns list of floats from one column
+     * @param data
+     * @param columnNumber
+     * @return
+     */
     private List<Float> getColumn(List <Record> data, int columnNumber){
         int i;
         List<Float> list= new ArrayList<>();
@@ -165,6 +238,13 @@ public class DataSetOperations {
         return list;
     }
 
+    /**
+     * returns list of floats from one column and only from records which contains given species name
+     * @param data
+     * @param columnNumber
+     * @param species
+     * @return
+     */
     private List<Float> getColumnForGivenSpecies(List <Record> data, int columnNumber, String species){
         int i;
         List<Float> list= new ArrayList<>();
