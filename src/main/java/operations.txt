@@ -1,0 +1,6 @@
+Help
+Data set loaded successfully
+Saving data to JSON
+Printing data
+Average value of column 3 is: 3.7586665
+Max value of column 2 for species: Iris-virginica is: 3.8
