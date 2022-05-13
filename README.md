@@ -25,3 +25,4 @@ Welcome to APROiris, program with helps in analysing irises data set.
    1. Iris.csv- It is the file that contains data set. It is possible to edit this file and add new records as long as the format of data doesn't change.
    2. operations.txt- this file contains list of all operations and results done by program.
    3. Iris.json- it is possible to export data to this file using 'save' command
+4. Source of Iris.csv: https://www.kaggle.com/datasets/kotharigunjan/iriscsv 
