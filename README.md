@@ -1,4 +1,4 @@
-Welcome to APROiris, program with helps in analysing irises data set.
+Welcome to APROiris, program which helps in analysing irises data set.
 1. How to start?
    1. Run Main.java
    2. first of all you have to load data set with 'load' command
